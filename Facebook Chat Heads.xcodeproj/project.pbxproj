@@ -22,6 +22,10 @@
 		6DC737AE18C20B9200109061 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC7378D18C20B9200109061 /* UIKit.framework */; };
 		6DC737B618C20B9200109061 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DC737B418C20B9200109061 /* InfoPlist.strings */; };
 		6DC737B818C20B9200109061 /* Facebook_Chat_HeadsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC737B718C20B9200109061 /* Facebook_Chat_HeadsTests.m */; };
+		6DC737C518C20BA100109061 /* YSChatHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC737C218C20BA100109061 /* YSChatHead.m */; };
+		6DC737C618C20BA100109061 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC737C318C20BA100109061 /* thumbnail.png */; };
+		6DC737C718C20BA100109061 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DC737C418C20BA100109061 /* thumbnail@2x.png */; };
+		6DC737CA18C20BB700109061 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC737C918C20BB700109061 /* NextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,12 @@
 		6DC737B318C20B9200109061 /* Facebook Chat HeadsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Facebook Chat HeadsTests-Info.plist"; sourceTree = "<group>"; };
 		6DC737B518C20B9200109061 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DC737B718C20B9200109061 /* Facebook_Chat_HeadsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Facebook_Chat_HeadsTests.m; sourceTree = "<group>"; };
+		6DC737C118C20BA100109061 /* YSChatHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSChatHead.h; sourceTree = "<group>"; };
+		6DC737C218C20BA100109061 /* YSChatHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSChatHead.m; sourceTree = "<group>"; };
+		6DC737C318C20BA100109061 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		6DC737C418C20BA100109061 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		6DC737C818C20BB700109061 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		6DC737C918C20BB700109061 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,12 @@
 				6DC7379E18C20B9200109061 /* Main_iPad.storyboard */,
 				6DC737A118C20B9200109061 /* ViewController.h */,
 				6DC737A218C20B9200109061 /* ViewController.m */,
+				6DC737C818C20BB700109061 /* NextViewController.h */,
+				6DC737C918C20BB700109061 /* NextViewController.m */,
+				6DC737C118C20BA100109061 /* YSChatHead.h */,
+				6DC737C218C20BA100109061 /* YSChatHead.m */,
+				6DC737C318C20BA100109061 /* thumbnail.png */,
+				6DC737C418C20BA100109061 /* thumbnail@2x.png */,
 				6DC737A418C20B9200109061 /* Images.xcassets */,
 				6DC7379018C20B9200109061 /* Supporting Files */,
 			);
@@ -235,6 +251,8 @@
 				6DC737A518C20B9200109061 /* Images.xcassets in Resources */,
 				6DC7379D18C20B9200109061 /* Main_iPhone.storyboard in Resources */,
 				6DC7379418C20B9200109061 /* InfoPlist.strings in Resources */,
+				6DC737C618C20BA100109061 /* thumbnail.png in Resources */,
+				6DC737C718C20BA100109061 /* thumbnail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DC737CA18C20BB700109061 /* NextViewController.m in Sources */,
 				6DC737A318C20B9200109061 /* ViewController.m in Sources */,
+				6DC737C518C20BA100109061 /* YSChatHead.m in Sources */,
 				6DC7379A18C20B9200109061 /* AppDelegate.m in Sources */,
 				6DC7379618C20B9200109061 /* main.m in Sources */,
 			);

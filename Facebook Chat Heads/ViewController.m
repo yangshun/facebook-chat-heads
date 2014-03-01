@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YSChatHead.h"
 
 @interface ViewController ()
 
@@ -17,7 +18,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    YSChatHead *chatHead = [[YSChatHead alloc] initWithFrame:CGRectMake(80, 80, 80, 80)];
+    
+    UIWindow *window = [[UIApplication sharedApplication] windows][0];
+    window.windowLevel = UIWindowLevelAlert;
+    
+    [window addSubview:self.view];
+    [window addSubview:chatHead];
+    [window makeKeyAndVisible];
 }
 
 - (void)didReceiveMemoryWarning
