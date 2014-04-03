@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YSChatHead : UIImageView
+@interface YSChatHead : UIView
+
+- (id)initWithFrame:(CGRect)frame image:(UIImage *)image;
 
 @end
