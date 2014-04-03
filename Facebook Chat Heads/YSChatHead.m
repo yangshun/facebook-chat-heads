@@ -92,10 +92,14 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [self setOriginalSize];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(chatHeadPressed:)]) {
+        [self.delegate chatHeadPressed:self];
+    }
 }
 
 - (void)drag:(UIPanGestureRecognizer *)pan {
-
+    
     if (pan.state == UIGestureRecognizerStateEnded) {
         CGPoint location = [pan locationInView:self.superview];
         CGPoint velocity = [pan velocityInView:self.superview];
@@ -154,14 +158,6 @@
     self.transform = CGAffineTransformIdentity;
 }
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 @end
+
+

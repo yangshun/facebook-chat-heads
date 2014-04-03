@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "YSChatHead.h"
 
-@interface ViewController ()
+@interface ViewController () <YSChatHeadDelegate>
 
 @end
 
@@ -19,7 +19,9 @@
 {
     [super viewDidLoad];
 	
-    YSChatHead *chatHead = [[YSChatHead alloc] initWithFrame:CGRectMake(80, 80, 80, 80)];
+    YSChatHead *chatHead = [[YSChatHead alloc] initWithFrame:CGRectMake(80, 80, 80, 80)
+                                                       image:[UIImage imageNamed:@"thumbnail"]];
+    chatHead.delegate = self;
     
     UIWindow *window = [[UIApplication sharedApplication] windows][0];
     window.windowLevel = UIWindowLevelAlert;
@@ -33,6 +35,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - ChatHead Delegate
+
+- (void)chatHeadPressed:(YSChatHead *)chatHead
+{
+    NSLog(@"Chat Head Pressed: %@", chatHead);
 }
 
 @end
