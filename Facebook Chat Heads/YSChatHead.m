@@ -26,9 +26,16 @@
     UIPanGestureRecognizer *panGesture;
     UITapGestureRecognizer *tapGesture;
     CGPoint panningStartPoint;
+    
+    UIImageView *imageView;
 }
 
 - (id)initWithFrame:(CGRect)frame
+{
+    return [self initWithFrame:frame image:nil];
+}
+
+- (id)initWithFrame:(CGRect)frame image:(UIImage *)image
 {
     frame = CGRectMake(0, 0, CH_SIZE, CH_SIZE);
     self = [super initWithFrame:frame];
@@ -44,17 +51,30 @@
         self.layer.shadowOpacity = CH_SHADOW_OPACITY;
         self.layer.frame = CGRectMake(0, 0, CH_SIZE, CH_SIZE);
         
-        CALayer *imageLayer = [CALayer layer];
-        imageLayer.frame = self.layer.frame;
-        imageLayer.contents = (id)[UIImage imageNamed:@"thumbnail.png"].CGImage;
-        imageLayer.cornerRadius = CH_SIZE/2;
-        imageLayer.masksToBounds = YES;
-        [self.layer addSublayer:imageLayer];
+        if (image) {
+            [self addImage:image];
+        } else {
+            self.backgroundColor = [UIColor blackColor];
+        }
         
         self.center = CGPointMake(CH_HORIZONTAL_DIST_FROM_EDGE, 300.f);
         self.userInteractionEnabled = YES;
     }
     return self;
+}
+
+- (void)addImage:(UIImage *)image
+{
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CH_SIZE, CH_SIZE)];
+    
+    CALayer *imageLayer = [CALayer layer];
+    imageLayer.frame = self.layer.frame;
+    imageLayer.contents = (id)image.CGImage;
+    imageLayer.cornerRadius = CH_SIZE/2;
+    imageLayer.masksToBounds = YES;
+    [imageView.layer addSublayer:imageLayer];
+    
+    [self addSubview:imageView];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
